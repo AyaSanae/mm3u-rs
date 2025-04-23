@@ -1,0 +1,17 @@
+[package]
+name = "mm3u-rs"
+version = "1.0.0"
+edition = "2021"
+description = """
+A tool to convert text music lists to M3U list.
+一个将文本音乐列表转换成 M3U 列表的工具。
+"""
+
+[dependencies]
+clap = { version = "4.5.35", features = ["derive","cargo"] }
+strsim = "0.11.1"
+
+[profile.release]
+debug = false
+lto = "thin"
+
